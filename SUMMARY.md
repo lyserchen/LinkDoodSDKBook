@@ -1,5 +1,5 @@
 #Summary
-* [Linkdood开发指南](README.md)
+* [LinkDood SDK开发指南](README.md)
 * [iOS开发指南]()
     * [SDK概述](ios/describe.md)
     * [开发准备](ios/prepare.md)
