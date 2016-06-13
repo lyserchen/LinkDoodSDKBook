@@ -264,6 +264,7 @@ Contact myInfo = current.getMyInfo();
 ```
 ####判断当前账户在线
 判断是否已经登录成功在线
+
 ``` 
 boolean online = current.isOnline();
 ```
@@ -271,6 +272,7 @@ boolean online = current.isOnline();
 修改个人信息，修改头像调用其它方法
 传入参数：（修改信息Contact，callBack）
 说明示例
+
 ``` 
 Contact contact = new Contact();
 //仅修改名称,不需要修改的不用设置
@@ -282,21 +284,41 @@ current.updateInfo(Contact myInfo, ResultCallBack callBack);
 ```
 ###设置个人头像
 传入参数：（头像本地路径，callBack)
+
 ```
 auth.setAvater(String avatar,ResultCallBack callBack);
 ```
 ####设置个人信息更改监听
 修改个人信息成功后通过推送更新信息
+
 ```
 current.setInfoChangeListener(InfoChangeListener listener);
 ```
 ####设置重登录监听
 账户被踢或者session过期会导致账户需要重新登录
+
 ```
 current.setReLoginListener(ReLoginListener listener)
 ```
 ####设置数据更新监听
 SDK版本更新时可能会出现数据库更新操作，需要在界面上等待更新完成后执行其他操作
+
 ```
 current.setDbUpdateListener(DBUpdateListener listener);
+```
+
+##企业组织 
+`EnterpriseService enterpriseService = SDKClient.instance().getEnterpriseService()`
+###获取企业
+```
+enterpriseService.getEntList(ResultCallBack<ArrayList<EnerpriseBean>> callBack);
+```
+###获取组织成员列表
+传入参数：（企业id，组织id ，callBak）
+企业根组织第一次获取传（0，0）
+组织ID在第一次取得时候传0，之后传入要获取的组织ID
+返回结果：回调中返回组织和成员列表
+
+```
+enterpriseService.getOrgAndUserList(long enterpriseID,long organizeID,ResultCallBack<OrgAndUserListResult> callBack)
 ```
