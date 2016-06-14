@@ -22,11 +22,6 @@
 ###SDK注册审核流程
 ![](images/check.png)
 
-###SDK客户端接入流程
-![](images/client.png)
-
-###SDK后台管理流程
-![](images/manage.png)
 
 ##iOS客户端集成
 请参考文档[《IM基础功能(iOS)开发指南》](iOS/describe.md)
