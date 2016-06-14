@@ -17,10 +17,10 @@
 
 
 ##iOS客户端集成
-请参考文档[《IM基础功能(iOS)开发指南》](iOS/describe.md)
+请参考文档[《IM基础功能(iOS)开发指南》](ios/describe.md)
 
 ##Android客户端集成
-请参考文档[《IM基础功能(Android)开发指南》](Android/describe.md)
+请参考文档[《IM基础功能(Android)开发指南》](android/describe.md)
 
 ##PC端集成
 请参考文档[《IM基础功能(PC)开发指南》]()
