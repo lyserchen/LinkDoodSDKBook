@@ -7,6 +7,7 @@
 * 信息类型：文字、表情、图片、语音、视频、地理位置、通知消息
 
 ##快速入门
+###快速开始
 * 开始集成豆豆SDK
 * 加入豆豆，注册豆豆账号
 * 在开发者后台创建App，获取token与授权证书
@@ -15,12 +16,23 @@
 * 进行UI界面定义和功能调整
 * 提交上线申请，应用市场上线
 
+###架构介绍
+![](images/framework.png)
+
+###SDK注册审核流程
+![](images/check.png)
+
+###SDK客户端接入流程
+![](images/client.png)
+
+###SDK后台管理流程
+![](images/manage.png)
 
 ##iOS客户端集成
-请参考文档[《IM基础功能(iOS)开发指南》](ios/describe.md)
+请参考文档[《IM基础功能(iOS)开发指南》](iOS/describe.md)
 
 ##Android客户端集成
-请参考文档[《IM基础功能(Android)开发指南》](android/describe.md)
+请参考文档[《IM基础功能(Android)开发指南》](Android/describe.md)
 
 ##PC端集成
 请参考文档[《IM基础功能(PC)开发指南》]()
