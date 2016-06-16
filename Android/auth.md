@@ -191,11 +191,13 @@ auth.localSetting(byte type, ArrayList<LocalSettingBean> item, ResultCallBack<Lo
 `AccountService accountService = SDKClient.instance().getAccountService()`
 
 ###获取当前登录账户
-``` 
+
+``` java
 Account current = accountService.getCurrent()
 ``` 
 ###当前账户ID
-``` 
+
+``` java
 long userID = accountService.getUserID();
 ```
 ###判断是否为当前账户

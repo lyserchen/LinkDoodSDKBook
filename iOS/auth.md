@@ -2,7 +2,8 @@
 ##认证
 ###登录
 ####手动登录
-```
+~~~
+
 /*!
 
 * @method    loginWithAccount-登录
@@ -36,7 +37,7 @@
                   domain:(NSString *)domain
 
               completion:(void (^) (NSError *error))completion;
-```
+~~~
 
 ####通过密码验证历史账号登录
 ```
