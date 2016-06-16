@@ -6,7 +6,7 @@
 * 聊天方式：单聊、群聊、聊天室
 * 信息类型：文字、表情、图片、语音、视频、地理位置、通知消息
 
-##SDK有哪些功能即时通讯功能
+##SDK有哪些即时通讯功能
 
 * 认证、联系人、聊天
 
@@ -41,4 +41,30 @@
     * 第三方认证注册（OAuth）
 
 * 豆豆账户登录、登出
+
+
+##SDK下载
+
+|  ![](images/ios_logo.png) |  ![](images/android_logo.png)|  ![](images/PC_logo.png) |
+| :-----:  | :-----:| :-----: | 
+|  [iOS SDK下载]()    |   [Android SDK下载](./download/Android_SDK.zip)    |    [PC SDK下载]()      |
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
     
