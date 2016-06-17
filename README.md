@@ -47,7 +47,7 @@
 
 |  ![](images/ios_logo.png) |  ![](images/android_logo.png)|  ![](images/PC_logo.png) |
 | :-----:  | :-----:| :-----: | 
-|  [iOS SDK下载]()    |   [Android SDK下载](./download/Android_SDK.zip)    |    [PC SDK下载]()      |
+|  [iOS SDK下载](http://blog.liandoudou.cn/doku.php?id=wiki:sdk)    |   [Android SDK下载](http://blog.liandoudou.cn/doku.php?id=wiki:sdk)    |    [PC SDK下载](http://blog.liandoudou.cn/doku.php?id=wiki:sdk)      |
 
 
  
