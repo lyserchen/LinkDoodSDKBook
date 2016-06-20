@@ -83,32 +83,50 @@
 获取服务器时间
 
 ~~~objectivec
-	- (void)serverTime:(void (^) (NSError *error,int64_t time))completion;
+- (void)serverTime:(void (^) (NSError *error,int64_t time))completion;
+~~~
 通过注册apns推送获取到的设备标识
 
-	- (void)registerPushToken:(NSString*)pushToken completion:(void (^) (NSError *error))completion;
+~~~objectivec
+- (void)registerPushToken:(NSString*)pushToken completion:(void (^) (NSError *error))completion;
+~~~
 账号激活状态（打开或者关闭notify消息,用于多服务器子账号或者主账号程序运行状态切换），设置是否成功
 
-	- (bool)makeActivationState:(active_state)state;
+~~~objectivec
+- (bool)makeActivationState:(active_state)state;
+~~~
 ###注册、找回密码
 注册第一步，获取验证码和注册标识
 
-	- (void) registery1:(void (^) (bool state,NSDictionary *object))completion;
+~~~objectivec
+- (void) registery1:(void (^) (bool state,NSDictionary *object))completion;
+~~~
 注册第二步，设置昵称和密码
 
-	- (void) registery2:(void (^)(bool, NSDictionary *))completion;
+~~~objectivec
+- (void) registery2:(void (^)(bool, NSDictionary *))completion;
+~~~
 找回密码第一步，同注册第一步
 
-	- (void) resetPwd1:(void (^) (bool state,NSDictionary *object))completion;
+~~~objectivec
+- (void) resetPwd1:(void (^) (bool state,NSDictionary *object))completion;
+~~~
 找回密码第二部，设置新的密码
 
-	- (void) resetPwd2:(void (^)(bool, NSDictionary *))completion;
+~~~objectivec
+- (void) resetPwd2:(void (^)(bool, NSDictionary *))completion;
+~~~
+
+
 ##全局运行数据
 获取SDK版本号
 
-	- (NSString*)version;
+```objectivec
+- (NSString*)version;
+```
 **通过证书注册应用（必须注册应用才能使用SDK）**
 
+```objectivec
 /*!
 
 * @method  registerApp
@@ -124,8 +142,9 @@
 */
 
 - (NSString*)registerApp:(NSString*)certificatePath onCachePath:(NSString*)path;
+```
 
-~~~
+
 获取指定服务器信息
  
 ~~~objectivec
