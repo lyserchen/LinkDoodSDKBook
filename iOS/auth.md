@@ -2,79 +2,87 @@
 ##认证
 ###登录
 ####手动登录
-~~~
+~~~objectivec
 
 /*!
 
-* @method    loginWithAccount-登录
+* @method  loginWithAccount-登录
 
 * @descript  全局登录接口
 
-* @param     account   登录帐号
+* @param account 登录帐号
 
-* @param     passwor   登录密码
+* @param passwor 登录密码
 
-* @param     loginType  登录类型
+* @param loginType  登录类型
 
-* @param     region  国家或者地区编码
+* @param region  国家或者地区编码
 
-* @param     domain  服务器标识或者服务器地址
+* @param domain  服务器标识或者服务器地址
 
-* @param     completion  登录结果(error为空表示成功,失败有具体失败原因说明)
+* @param completion  登录结果(error为空表示成功,失败有具体失败原因说明)
 
-* @result    空
+* @result  空
 
 */
 
 - (void)loginWithAccount:(NSString*)account
 
-                password:(NSString*)pwd
+  password:(NSString*)pwd
 
-               loginType:(login_type)loginType
+ loginType:(login_type)loginType
 
-                  region:(NSString*)regionCode
+  region:(NSString*)regionCode
 
-                  domain:(NSString *)domain
+  domain:(NSString *)domain
 
-              completion:(void (^) (NSError *error))completion;
+  completion:(void (^) (NSError *error))completion;
 ~~~
 
 ####通过密码验证历史账号登录
-```
+~~~objectivec
 /*!
 
-* @method    loginWithAccount-登录
+* @method  loginWithAccount-登录
 
 * @descript  全局登录接口
 
-* @param     password  登录密码
+* @param password  登录密码
 
-* @param     completion  登录结果(error为空表示成功,失败有具体失败原因说明)
+* @param completion  登录结果(error为空表示成功,失败有具体失败原因说明)
 
-* @result    空
+* @result  空
 
 */
 
 - (void)autoLoginWithPassword:(NSString*)password
 
-       	completion:(void (^) (NSError *error))completion;
-```
+ 	completion:(void (^) (NSError *error))completion;
+~~~
 
 ####自动登录
 利用历史账号登录，登录结果（error为空表示成功，失败有具体失败原因说明）
 
-	- (void)autoLogin:(void (^) (NSError *error))completion;
+~~~objectivec
+- (void)autoLogin:(void (^) (NSError *error))completion;
+~~~
 ####登出
 退出登录,登录接口回调代码块
 
-	- (void)logoff:(void (^)(NSError *error))completion;
+~~~objectivec
+- (void)logoff:(void (^)(NSError *error))completion;
+
+~~~
 ###应用授权
 授权第三方应用key
 
-	- (void)clientKey:(void (^) (NSError *error,NSString *clientKey))completion;	
+~~~objectivec
+- (void)clientKey:(void (^) (NSError *error,NSString *clientKey))completion;	
+~~~
 ###其他功能或信息获取
 获取服务器时间
 
+~~~objectivec
 	- (void)serverTime:(void (^) (NSError *error,int64_t time))completion;
 通过注册apns推送获取到的设备标识
 
@@ -101,153 +109,184 @@
 	- (NSString*)version;
 **通过证书注册应用（必须注册应用才能使用SDK）**
 
-```
 /*!
 
-* @method    registerApp
+* @method  registerApp
 
 * @descript  证书注册应用
 
-* @param     certificatePath   证书地址
+* @param certificatePath 证书地址
 
-* @param     cacheFolder       缓存保存地址
+* @param cacheFolder 缓存保存地址
 
-* @result    初始化后的缓存地址
+* @result  初始化后的缓存地址
 
 */
 
 - (NSString*)registerApp:(NSString*)certificatePath onCachePath:(NSString*)path;
 
-```
+~~~
 获取指定服务器信息
-
-	- (NSDictionary*)getServeInfo:(NSString*)serveName;
+ 
+~~~objectivec
+- (NSDictionary*)getServeInfo:(NSString*)serveName;
+~~~
 获取会话记录列表
 
-	-(LDChatListModel *)chatListModel;
+~~~objectivec
+-(LDChatListModel *)chatListModel;
+~~~
 获取联系人列表
 
-	-(LDContactListModel *)contactListModel;
+~~~objectivec
+-(LDContactListModel *)contactListModel;
+~~~	
 通过id查找本地联系人，获得联系人
 
-	- (LDContactModel*)localContact:(int64_t)ID;
+~~~objectivec
+- (LDContactModel*)localContact:(int64_t)ID;
+~~~
 获取机器人列表
 
-	- (LDRobotListModel *)robotListModel;
+~~~objectivec
+- (LDRobotListModel *)robotListModel;
+~~~ 
 通过id获取本地机器人
 
-	- (LDRobotModel*)localRobot:(int64_t)ID;
+~~~objectivec
+- (LDRobotModel*)localRobot:(int64_t)ID;
+~~~
 获取群组列表
 
-	- (LDGroupListModel *)groupListModel;
+~~~objectivec
+- (LDGroupListModel *)groupListModel;
+~~~
 通过id获取本地群组
 
-	- (LDGroupModel*)localGroup:(int64_t)ID;
+~~~objectivec
+- (LDGroupModel*)localGroup:(int64_t)ID;
+~~~
 获取当前群的群成员集合
 
-	- (LDGroupMemberListModel*)groupMembers;
+~~~objectivec
+- (LDGroupMemberListModel*)groupMembers;
+~~~
 获取组织架构的企业列表
 
-	- (LDEnterpriseListModel *)enterpriseListModel;
+~~~objectivec
+- (LDEnterpriseListModel *)enterpriseListModel;
+~~~
 获取最新系统的提示消息
 
-	- (LDSysMsgModel*)sysMessage;
+~~~objectivec
+- (LDSysMsgModel*)sysMessage;
+~~~
 获取登录用户信息
 
-	- (LDMyselfModel*)mySelfInfo;
+~~~objectivec
+- (LDMyselfModel*)mySelfInfo;
+~~~
 获取登录账号信息
 
-	- (LDAuthModel*)loginConfig;
+~~~objectivec
+- (LDAuthModel*)loginConfig;
+~~~
 获取组织架构企业列表
 
-	- (void)queryEnterpriseList;
+~~~objectivec
+- (void)queryEnterpriseList;
+~~~
 获取密码强度信息
 
-	- (void)queryPasswordInfo;
+~~~objectivec
+- (void)queryPasswordInfo;
+~~~
 密码强度信息
 
-	- (LDPasswordStipulateModel*)passwordInfo;
+~~~objectivec
+- (LDPasswordStipulateModel*)passwordInfo;
+~~~
 头像图片
 
-```
+~~~objectivec
 /*!
 
-* @method    avatar
+* @method  avatar
 
 * @descript  获取头像图片
 
-* @param     avatar    头像名
+* @param avatar  头像名
 
-* @param     image     缺省图片
+* @param image 缺省图片
 
-* @result    头像图片
+* @result  头像图片
 
 */
 
 - (UIImage*)avatar:(NSString*)avatar withDefault:(NSString*)image;
-```
+~~~
 解密后的图片
 
-```
+~~~objectivec
 
 /*!
 
-* @method    imageWithKey
+* @method  imageWithKey
 
 * @descript  获取图片
 
-* @param     key       文件密钥
+* @param key 文件密钥
 
-* @param     imagePath 文件路径
+* @param imagePath 文件路径
 
-* @param     image     缺省图片
+* @param image 缺省图片
 
-* @result    解密后的图片
+* @result  解密后的图片
 
 */
 
 - (UIImage*)imageWithKey:(NSString*)key fromPath:(NSString*)imagePath withDefault:(NSString*)image;
 
-```
+~~~
 加密
 
-```
+~~~objectivec
 /*!
 
-* @method    encryptFile
+* @method  encryptFile
 
 * @descript  加密文件接口
 
-* @param     srcPath    源文件路径
+* @param srcPath  源文件路径
 
-* @param     targetPath 加密后文件路径
+* @param targetPath 加密后文件路径
 
-* @param     key        加密秘钥
+* @param key  加密秘钥
 
-* @result    加密是否成功
+* @result  加密是否成功
 
 */
 
 - (bool)encryptFile:(NSString*)srcPath toFile:(NSString*)targetPath withKey:(NSString*)key;
 
-```
+~~~
 id范围
 
-```
+~~~objectivec
 /*!
 
-* @method    idRange
+* @method  idRange
 
 * @descript  id范围(判断id是群、个人、机器人等)
 
-* @param     target    判断对象id
+* @param target  判断对象id
 
-* @result    id范围
+* @result  id范围
 
 */
 
 -(IDRange)idRange:(int64_t)target;
-```
+~~~
 ##推送模块
 数据同步状态通知
 
@@ -255,22 +294,36 @@ id范围
 
 监听最近会话列表
 
-	- (void)chatListMoniter:(ChatListMoniter)moniter;
+~~~objectivec
+- (void)chatListMoniter:(ChatListMoniter)moniter;
+~~~
 监听联系人列表
 
-	- (void)contactListMoniter:(ContactListMoniter)moniter;
+~~~objectivec
+- (void)contactListMoniter:(ContactListMoniter)moniter;
+~~~
 新消息监听
 
-	- (void)messageMoniter:(MessageMoniter)moniter forTarget:(int64_t)target;
+~~~objectivec
+- (void)messageMoniter:(MessageMoniter)moniter forTarget:(int64_t)target;
+~~~
 个人信息变动监听
 
-	- (void)myselfInfoMoniter:(MyselfInfoMoniter)moniter;
+~~~objectivec
+- (void)myselfInfoMoniter:(MyselfInfoMoniter)moniter;
+~~~
 群成员信息变动监听
 
-	- (void)groupMembersMoniter:(GroupMembersMoniter)moniter;
+~~~objectivec
+- (void)groupMembersMoniter:(GroupMembersMoniter)moniter;
+~~~
 好友、群、群成员、机器人头像更新并下载到本地后的通知，在需要监听时灵活调用
 
-	- (void)headerRefreshMoniter:(HeaderRefreshMoniter)moniter;
+~~~objectivec
+- (void)headerRefreshMoniter:(HeaderRefreshMoniter)moniter;
+~~~
 上下线提醒或退出或被踢下线
 
-	- (void)kick:(Kick)moniter;
+~~~objectivec
+- (void)kick:(Kick)moniter;
+~~~

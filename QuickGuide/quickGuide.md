@@ -1,4 +1,5 @@
 ##快速入门
+
 ###快速开始
 * 开始集成豆豆SDK
 * 加入豆豆，注册豆豆账号
@@ -13,7 +14,6 @@
 
 ###SDK注册审核流程
 ![](../images/check.png)
-
 
 ##iOS客户端集成
 
@@ -90,6 +90,8 @@ Build Settings—>Linking—>Other Linker Flags加入-ObjC
 3.其他相关接口的调用请参看DEMO功能实现以及相关API文档
 
 * 请参考文档[《IM基础功能(iOS)开发指南》](../iOS/describe.md)
+
+
 
 ##Android客户端集成
 
